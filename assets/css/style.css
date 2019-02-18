@@ -1,0 +1,101 @@
+body
+{
+    background-color: blue;
+    
+}
+
+#game
+{
+    display: table;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+    height: 100%;
+}
+
+
+#play
+{
+    font-size: 54px;
+    color: yellow;
+    background-color: blue;
+    border: 5px solid navy;
+    font-weight: bold;
+    padding: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+
+#intro
+{
+    color: white;
+    border: 5px solid navy;
+    padding: 10px;
+}
+
+#introPic
+{
+    border: 5px solid navy;
+}
+
+#gameMenu
+{
+    display: inline-block;
+    text-align: center;
+    background-color: blue;
+    margin: 25px 200px 25px 225px;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+h6
+{
+    font-size: 64px;
+    color: yellow;
+    background-color: blue;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+    border: 5px solid navy;
+    text-align: center;
+}
+
+h1
+{
+    text-align: center;
+    border: 5px solid navy;
+    padding: 15px;
+    color: yellow;
+    font-weight: bolder;
+    font-size: 64px;
+    font-family: 'Roboto Slab', serif;
+}
+
+#triviaButton
+{
+    font-size: 64px;
+    border: 5px solid navy;
+    text-align: center;
+    color: white;
+    background-color: blue;
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+}
+
+button .answerButton
+{
+    display: flex;
+    justify-content: flex-start;
+    background-color: blue;
+    color: white;
+    font-size: 64px;
+
+}
+
+p
+{
+    display: flex;
+    font-size: 64px;
+    justify-content: center;
+    margin: 30px;
+}
+
+
