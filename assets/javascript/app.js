@@ -14,7 +14,7 @@ $("#play").on("click", function () {  //calling play function at play button onc
 var chartCreate = function () {
     $('#game').empty();
     $('#questionBox').empty();
-    clearInterval(roundCompleted);
+
     $titleRow = $("<h1>").text("Jeffpardy");
     $titleRow.css('width', '100%', 'height', '100%');
     $("#game").prepend($titleRow);
@@ -32,6 +32,8 @@ var chartCreate = function () {
         $("#game").append($topBoxes);
 
     }
+
+
 }
 
 
@@ -82,6 +84,7 @@ var fourthQuote = new Quote("'Oohh, Aahh, that's how all of this starts, but the
 
 askQuote = function (currentQuote) {
     $quoteBox = $('<p>').text(currentQuote.q);
+    $quoteBox.attr('id', 'chosenQuote');
     $answerA = $('<button>').text(currentQuote.a);
     $answerB = $('<button>').text(currentQuote.b);
     $answerC = $('<button>').text(currentQuote.c);
@@ -104,8 +107,7 @@ askQuote = function (currentQuote) {
         'class': 'answerButton'
     });
 
-    $quoteBox.append($answerA, $answerB, $answerC, $answerD);
-    $('#questionBox').append($quoteBox);
+    $('#questionBox').append($quoteBox, $answerA, $answerB, $answerC, $answerD);
 
     $(document).on('click', 'button', function () {
         if ($(this).attr('class') == 'answerButton') {

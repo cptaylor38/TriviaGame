@@ -8,9 +8,9 @@ body
 {
     display: table;
     justify-content: center;
-    width: 100%;
-    margin-left: 0;
-    height: 100%;
+    width: 95%;
+    margin: auto;
+    
 }
 
 
@@ -35,6 +35,7 @@ body
 #introPic
 {
     border: 5px solid navy;
+    margin-bottom: 20px;
 }
 
 #gameMenu
@@ -62,7 +63,7 @@ h1
 {
     text-align: center;
     border: 5px solid navy;
-    padding: 15px;
+    padding: 10px;
     color: yellow;
     font-weight: bolder;
     font-size: 64px;
@@ -78,24 +79,37 @@ h1
     background-color: blue;
     font-weight: bold;
     font-family: 'Roboto Slab', serif;
+    height: 85%;
+    
 }
 
-button .answerButton
+#chosenQuote
 {
-    display: flex;
-    justify-content: flex-start;
-    background-color: blue;
+    text-align: center;
+    font-size: 38px;
+    margin: 30px 84px 30px 84px;
     color: white;
-    font-size: 64px;
-
+    border: 5px solid navy;
+    font-family: 'Roboto Slab', serif;
+    background-color: navy;
 }
 
-p
+.answerButton
 {
-    display: flex;
-    font-size: 64px;
-    justify-content: center;
-    margin: 30px;
+    text-align: center;
+    font-size: 38px;
+    margin: 10px 84px 10px 100px;
+    width: 85%;
+    color: yellow;
+    background-color: navy;
+    border: 5px solid navy;
+    font-family: 'Roboto Slab', serif;
 }
+
+#questionBox
+{
+    margin: auto;
+}
+
 
 
