@@ -3,6 +3,8 @@ var intervalId;
 var number;
 var clockRunning = false;
 var intervalId;
+var audio = new Audio('assets/audio/timerTheme.mp3');
+
 
 function Quote(q, a, b, c, d, correct, img) {
     this.q = q;
@@ -30,9 +32,9 @@ $("#play").on("click", function () {
 })
 
 var chartCreate = function () {
-
     $('#game').empty();
     $('#questionBox').empty();
+    audio.src = 'assets/audio/timerTheme.mp3';
     clearInterval(intervalId);
     $titleRow = $("<h1>").text("Jeffpardy");
     $titleRow.css('width', '100%', 'height', '100%');
@@ -50,9 +52,6 @@ var chartCreate = function () {
 
         $("#game").append($topBoxes);
     }
-
-
-
 }
 
 
@@ -109,10 +108,12 @@ askQuote = function (currentQuote) {
     $('#questionBox').append($quoteBox, $answerA, $answerB, $answerC, $answerD, $timer);
 
     $(document).on('click', 'button', function () {
+
         console.log('onclick 2');
         if ($(this).attr('class') == 'answerButton') {
             if ($(this).attr('id') == currentQuote.correct) {
                 rightAnswer(currentQuote.imgURL)
+
             }
             else {
                 wrongAnswer();
@@ -124,7 +125,7 @@ askQuote = function (currentQuote) {
         console.log('timer');
         number--;
         $timer.text(number);
-
+        audio.play();
         if (number === 0 && round === 4) {
             gameOver();
         }
@@ -156,6 +157,7 @@ rightAnswer = function (currentQuote) {
     else {
         setTimeout(chartCreate, 1000 * 3);
     }
+    audio.src = 'assets/audio/rightAnswer.mp3';
 }
 
 wrongAnswer = function () {
@@ -166,7 +168,7 @@ wrongAnswer = function () {
         'height': '400px'
     })
     $('#questionBox').empty();
-    $message = $('<h1>').text('Wrong Answer. \n"Checkmate" - Independence Day');
+    $message = $('<h1>').text("Wrong Answer." + " '\nNo pay, no Goldblum. That's it.'");
     $message.append($quoteImage);
     $('#questionBox').append($message);
     if (round === 4) {
@@ -175,10 +177,12 @@ wrongAnswer = function () {
     else {
         setTimeout(chartCreate, 1000 * 3);
     }
+    audio.src = 'assets/audio/wrongAnswer.mp3';
 }
 
 
 var gameOver = function () {
+    audio.src = 'assets/audio/timerTheme.mp3';
     console.log('gameOver');
     $('#game').empty();
     $('#questionBox').empty();
