@@ -15,3 +15,4 @@ A correct answer will display that the user has guessed the correct movie and di
 Once all 4 questions have been asked, the game will finish with a brief "Thanks for playing!" message.
 
 
+Edit - Audio clip timing could be readjusted - currently plays for a split second before returning to question selection screen.
